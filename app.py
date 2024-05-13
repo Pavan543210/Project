@@ -1,8 +1,15 @@
 import streamlit as st
 import requests
 
-# Hide the GitHub icon
-st.set_page_config(show_github=False)
+# Hide the GitHub icon with CSS
+hide_github_css = """
+<style>
+.css-14jc2n5 {
+    display: none !important;
+}
+</style>
+"""
+st.markdown(hide_github_css, unsafe_allow_html=True)
 
 # Streamlit App
 st.title("Named Entity Recognition")
