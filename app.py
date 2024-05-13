@@ -37,7 +37,7 @@ if st.button("Recognize Entities"):
 # Hide the GitHub icon with CSS
 hide_github_css = """
 <style>
-.stActionButton{
+.stGithubCorner {
     display: none !important;
 }
 </style>
