@@ -1,6 +1,10 @@
 import streamlit as st
 import requests
 
+# Function to manipulate the word to achieve desired capitalization
+def custom_title(word):
+    return word[0].upper() + word[1:].lower()
+
 # Streamlit App
 st.title("Named Entity Recognition")
 
@@ -39,6 +43,3 @@ hide_github_css = """
 </style>
 """
 st.markdown(hide_github_css, unsafe_allow_html=True)
-# Function to capitalize the first letter of each word and convert the rest to lowercase
-def custom_title(word):
-    return ' '.join([w.capitalize() if i == 0 else w.lower() for i, w in enumerate(word.split())])
