@@ -26,6 +26,8 @@ if st.button("Recognize Entities"):
     for entity in output:
         word = entity['word']
         entity_group = entity['entity_group']
+        # Capitalize the first letter and convert the rest to lowercase
+        word = word.capitalize()
         st.write(f"{word} - {entity_group}")
 
 # Hide the GitHub icon with CSS
@@ -37,4 +39,3 @@ hide_github_css = """
 </style>
 """
 st.markdown(hide_github_css, unsafe_allow_html=True)
-
