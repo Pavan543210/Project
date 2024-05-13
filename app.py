@@ -26,8 +26,8 @@ if st.button("Recognize Entities"):
     for entity in output:
         word = entity['word']
         entity_group = entity['entity_group']
-        # Convert the first letter to uppercase and the rest to lowercase
-        word = word.title()
+        # Manipulate the word to achieve desired capitalization
+        word = custom_title(word)
         st.write(f"{word} - {entity_group}")
 
 # Hide the GitHub icon with CSS
@@ -39,3 +39,6 @@ hide_github_css = """
 </style>
 """
 st.markdown(hide_github_css, unsafe_allow_html=True)
+# Function to capitalize the first letter of each word and convert the rest to lowercase
+def custom_title(word):
+    return ' '.join([w.capitalize() if i == 0 else w.lower() for i, w in enumerate(word.split())])
