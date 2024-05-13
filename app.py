@@ -1,16 +1,6 @@
 import streamlit as st
 import requests
 
-# Hide the GitHub icon with CSS
-hide_github_css = """
-<style>
-.stActionButton{
-    display: none !important;
-}
-</style>
-"""
-st.markdown(hide_github_css, unsafe_allow_html=True)
-
 # Streamlit App
 st.title("Named Entity Recognition")
 
@@ -37,3 +27,14 @@ if st.button("Recognize Entities"):
         word = entity['word']
         entity_group = entity['entity_group']
         st.write(f"{word} - {entity_group}")
+
+# Hide the GitHub icon with CSS
+hide_github_css = """
+<style>
+.stActionButton{
+    display: none !important;
+}
+</style>
+"""
+st.markdown(hide_github_css, unsafe_allow_html=True)
+
