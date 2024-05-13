@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
 
+# Hide the GitHub icon
+st.beta_set_page_config(show_github_paginator=False)
+
 # Streamlit App
 st.title("Named Entity Recognition")
 
