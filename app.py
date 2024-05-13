@@ -10,7 +10,7 @@ sample_sentence = st.text_area("Enter a sample sentence:", "")
 # Button to trigger named entity recognition
 if st.button("Recognize Entities"):
     # API URL and headers
-    API_URL = "https://api-inference.huggingface.co/models/pavanch121/distilbert-base-uncased-finetuned-ner"
+    API_URL = "https://api-inference.huggingface.co/models/spacy/en_core_web_sm"
     headers = {"Authorization": "Bearer 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"}
 
     # Function to make API call
