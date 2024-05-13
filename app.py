@@ -3,7 +3,7 @@ import requests
 
 # Function to manipulate the word to achieve desired capitalization
 def custom_title(word):
-    return word[0].upper() + word[1:].lower()
+    return ' '.join([w[0].upper() + w[1:].lower() for w in word.split()])
 
 # Streamlit App
 st.title("Named Entity Recognition")
