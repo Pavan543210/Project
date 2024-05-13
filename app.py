@@ -4,7 +4,7 @@ import requests
 # Hide the GitHub icon with CSS
 hide_github_css = """
 <style>
-.css-14jc2n5 {
+.stActionButton{
     display: none !important;
 }
 </style>
